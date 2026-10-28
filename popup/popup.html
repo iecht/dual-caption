@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>Dual Caption</title>
+  <link rel="stylesheet" href="../ui/base.css">
+  <style>
+    body { width: 320px; padding: 14px 14px 12px; }
+    header { display: flex; align-items: center; gap: 10px; padding: 0 2px 2px; }
+    header img { width: 30px; height: 30px; }
+    header h1 { font-size: 15px; margin: 0; font-weight: 600; }
+    header p { margin: 0; color: var(--label3); font-size: 12px; }
+    .status-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--label3); flex: none; }
+    .status-dot.ok { background: var(--green); }
+    .keys { display: grid; grid-template-columns: auto 1fr auto 1fr; gap: 6px 8px; align-items: center; padding: 10px 12px; color: var(--label2); font-size: 12px; }
+    .count { color: var(--label3); font-weight: 400; margin-left: 2px; }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="../icons/icon128.png" alt="">
+    <div>
+      <h1>Dual Caption</h1>
+      <p>网页视频双语字幕</p>
+    </div>
+  </header>
+
+  <div class="section-title">当前页面</div>
+  <div class="group">
+    <div class="row">
+      <span class="status-dot" id="dot"></span>
+      <div class="grow">
+        <div id="status">正在检测…</div>
+        <div class="sub" id="detail"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="grow">
+        <div>在此网站显示</div>
+        <div class="sub" id="host"></div>
+      </div>
+      <input type="checkbox" class="switch" id="enabled" disabled>
+    </div>
+  </div>
+
+  <div class="section-title">学习</div>
+  <div class="group">
+    <div class="row">
+      <div class="grow">生词本 <span class="count" id="count"></span></div>
+      <button class="btn small primary" id="open-wordlist">打开</button>
+    </div>
+  </div>
+
+  <div class="section-title">快捷键（视频页面）</div>
+  <div class="group">
+    <div class="keys">
+      <kbd>A</kbd><span>上一句</span><kbd>D</kbd><span>下一句</span>
+      <kbd>S</kbd><span>重播</span><kbd>Q</kbd><span>逐句暂停</span>
+      <kbd>M</kbd><span>收藏</span><kbd>T</kbd><span>字幕列表</span>
+      <kbd>H</kbd><span>隐藏</span><kbd>⌥⇧S</kbd><span>开关</span>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+.DS_Store
+# Subtitle files extracted from commercial releases — keep them local
+samples/
+*.mp4
+*.mkv

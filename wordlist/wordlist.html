@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>生词本 · Dual Caption</title>
+  <link rel="icon" href="../icons/icon32.png">
+  <link rel="stylesheet" href="../ui/base.css">
+  <link rel="stylesheet" href="wordlist.css">
+</head>
+<body>
+  <div class="toolbar">
+    <div class="toolbar-inner">
+      <div class="title">
+        <h1>生词本</h1>
+        <span class="muted" id="summary"></span>
+      </div>
+      <div class="search">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M16 16l4 4"/></svg>
+        <input id="q" type="search" placeholder="搜索">
+      </div>
+      <button class="btn" id="export-csv">导出 CSV</button>
+      <button class="btn" id="export-anki">导出 Anki</button>
+    </div>
+  </div>
+  <main id="list"></main>
+  <script src="../src/parser.js"></script>
+  <script src="wordlist.js"></script>
+</body>
+</html>
